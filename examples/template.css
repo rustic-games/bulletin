@@ -1,0 +1,92 @@
+body {
+  background-color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+}
+
+table {
+  border: none;
+  border-spacing: 20px;
+  height: 100%;
+}
+
+tr {
+  vertical-align: top;
+}
+
+td {
+  background-color: #FDE8CB;
+  border-radius: 5px;
+  box-shadow: 0 0 2px black;
+  height: 100%;
+  padding: 20px;
+  width: 50%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.title {
+  color: #2476AE;
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+.description {
+  color: #333;
+  flex: 1;
+  font-family: "Lucida Grande", serif;
+  font-size: 0.9em;
+  font-style: italic;
+  hyphens: auto;
+  line-height: 1.6em;
+  margin: 0 40px;
+  overflow-wrap: break-word;
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+.metadata {
+  font-size: 0.7em;
+  height: 30px;
+  margin-right: 37px;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.metadata span {
+  background-color: #031528;
+  border-radius: 3px;
+  color: #86BC53;
+  margin: 0 3px;
+  padding: 3px 5px;
+}
+
+.metadata span::before {
+  color: #f2d87c;
+}
+
+.metadata .context::before {
+  content: "context:";
+}
+
+.metadata .medium::before {
+  content: "medium:";
+}
+
+.metadata .language::before {
+  content: "language:";
+}
+
+.metadata .date::before {
+  content: "date:";
+}

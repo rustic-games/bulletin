@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resources: Game Loop</title>
+    <link rel="stylesheet" href="template.css" />
+  </head>
+  <body>
+    <table>
+      {% for post in posts -%}
+
+      {%- if loop.index0 is even -%}
+      <tr>
+      {%- endif -%}
+
+        <td>
+          <div class="card">
+            <a class="title" href="{{ post.href }}" target="blank">{{ post.description }}</a>
+            <div class="description">{{ post.extended }}</div>
+            <div class="metadata">
+              {% for key, value in post.tags -%}
+                {% if key == "s" -%}
+                  {% set class = "context" %}
+                {% elif key == "t" -%}
+                  {% set class = "medium" %}
+                {% elif key == "l" -%}
+                  {% set class = "language" %}
+                {% endif -%}
+
+                {%- if class is defined -%}
+              <span class="{{ class }}">{{ value }}</span>
+                {% endif -%}
+              {% endfor -%}
+
+              <span class="date">{{ post.time }}</span>
+            </div>
+          </div>
+        </td>
+
+      {%- if loop.index0 is not even -%}
+      </tr>
+      {%- elif loop.last -%}
+      <td></td>
+      </tr>
+      {%- endif -%}
+
+      {%- endfor %}
+    </table>
+  </body>
+</html>
